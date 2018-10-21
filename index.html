@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body,html{
+                height: 100%;
+                background: linear-gradient(#0c5460, #6f42c1);
+                color: white;
+            }
+            #particles-js {
+                position: absolute;
+                width: 99%;
+                height: 99%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <div class="container mt-5">
+            <h2 class="text-center">Simple Cashier Application</h2><br>
+
+            <section class="goods">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <form class="align-content-center">
+                            <label>Goodie Name:</label>
+                            <input type="text" id="goodie-name" class="form-control">
+                            <label class="mt-2">Quantity:</label>
+                            <input type="number" id="goodie-amount" class="form-control">
+                        </form>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-sm-6">
+                                <label>Subtotal:</label>
+                                <input type="text" id="subtotal-price" class="form-control" disabled>
+                            </div>
+                            <div class="col-sm-6">
+                                <button id="add-goodie" class="btn btn-primary btn-block" style="padding: 9% 0">Add Goodie</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <span class="text-center">Menu</span>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6 mt-2">
+                                <button type="button" id="add-espresso" class="btn btn-secondary btn-block" style="padding: 8% 0">Espresso</button>
+                                <button type="button" id="add-dblespresso" class="btn btn-secondary btn-block" style="padding: 8% 0">Double Espresso</button>
+                                <button type="button" id="add-cappuccino" class="btn btn-secondary btn-block" style="padding: 8% 0">Cappuccino</button>
+                                <button type="button" id="add-latte" class="btn btn-secondary btn-block" style="padding: 8% 0">Cafe Latte</button>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <button type="button" id="add-moka" class="btn btn-secondary btn-block" style="padding: 8% 0">Cafe Moka</button>
+                                <button type="button" id="add-white" class="btn btn-secondary btn-block" style="padding: 8% 0">Flat White</button>
+                                <button type="button" id="add-americano" class="btn btn-secondary btn-block" style="padding: 8% 0">Americano</button>
+                                <button type="button" id="add-cortado" class="btn btn-secondary btn-block" style="padding: 8% 0">Cortado</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </section>
+
+
+            <section class="pricing mt-3">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <form>
+                            <p>Total Price:</p>
+                            <input type="text" id="total-price" class="form-control" disabled>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <p>Discount: (in %)</p>
+                                <input type="text" id="discount" class="form-control">
+                            </div>
+                            <div class="col-sm-6">
+                                <button id="add-discount" class="btn btn-success btn-block" style="padding: 11% 0">Add Discount to Total Price</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </section>
+
+            <section class="payment mt-3">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <form>
+                            <p>User Payment:</p>
+                            <input type="text" id="user-payment" class="form-control">
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+                                <p>Remainder:</p>
+                                <input type="text" id="user-remainder" class="form-control" disabled>
+                            </div>
+                            <div class="col-sm-4">
+                                <button id="find-remainder" class="btn btn-dark btn-block" style="padding: 17% 0">Find Remainder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+
+        <script src="node_modules/particles.js/particles.js"></script>
+        <script>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load('particles-js', 'node_modules/particles.js/particles.json', function() {
+                console.log('callback - particles.js config loaded');
+            });
+        </script>
+    </body>
+</html>
